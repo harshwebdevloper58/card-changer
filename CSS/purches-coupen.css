@@ -29,7 +29,7 @@ img{
 }
 @media (max-width:500px){
    .container{
-    width: 106vw;
+    width: 256px;
     position: absolute;
     z-index: 10;
    }
