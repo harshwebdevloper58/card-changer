@@ -109,10 +109,10 @@ require("dotenv").config();
 
 var http = require('http').Server(app);
 
-const paymentRoute = require('./routers/paymentRoute');
+// const paymentRoute = require('./routers/paymentRoute');
 const { cardDetails } = require('./models/user');
 
-app.use('/',paymentRoute);
+// app.use('/',paymentRoute);
 
 // payment gateway ends here
 mongoose.connect(process.env.mongo_url);
