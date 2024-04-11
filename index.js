@@ -9,6 +9,7 @@ const { JSDOM } = require('jsdom');
 const userRoute = require("./routers/user");
 const routs = require("./routers/staticrouter");
 const app = express();
+const {fetchProfileDetails,fetchCardDetails, handleCardData,fetchProfileCardDetails, isExist} = require("./controllers/user")
 
 // Middleware
 app.use(express.static(__dirname));
