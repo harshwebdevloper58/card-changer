@@ -27,9 +27,7 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 
 router.get("/", (req, res) => {
-    const filePath = path.join(__dirname, '..', 'HTML', 'dashboard_cards.html');
-
-    res.sendFile(filePath);
+    res.redirect('https://card-changer.onrender.com/HTML/dashboard_cards.html');
 })
 // router.get("/api",restrictToLoggedinUserOnly,(req,res)=>{
 //     const filePath = path.join(__dirname, '..', 'HTML', 'payment.html'); 
@@ -38,9 +36,7 @@ router.get("/", (req, res) => {
 // })
 
 router.get("/signup", (req, res) => {
-    const filePath = path.join(__dirname, '..', 'HTML', 'registration.html');
-
-    res.sendFile(filePath);
+    res.redirect('https://card-changer.onrender.com/HTML/registration.html');
 })
 router.get("/login", (req, res) => {
     const filePath = path.join(__dirname, '..', 'HTML', 'login.html');
@@ -49,19 +45,13 @@ router.get("/login", (req, res) => {
 })
 
 router.get("/profile", restrictToLoggedinUserOnly, (req, res) => {
-    const filePath = path.join(__dirname, '..', 'HTML', 'profile.html');
-
-    res.sendFile(filePath);
+    res.redirect('https://card-changer.onrender.com/HTML/profile.html');
 })
 router.get("/about", (req, res) => {
-    const filePath = path.join(__dirname, '..', 'HTML', 'About.html');
-
-    res.sendFile(filePath);
+    res.redirect('https://card-changer.onrender.com/HTML/about.html');
 })
 router.get("/sell", restrictToLoggedinUserOnly, (req, res) => {
-    const filePath = path.join(__dirname, '..', 'HTML', 'sell_coupan.html');
-
-    res.sendFile(filePath);
+    res.redirect('https://card-changer.onrender.com/HTML/sell_coupan.html');
 })
 router.get("/purchase", restrictToLoggedinUserOnly, (req, res) => {
     const filePath = path.join(__dirname, '..', 'HTML', 'purchase_coupan.html');
