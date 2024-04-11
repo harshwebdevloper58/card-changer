@@ -15,7 +15,7 @@ dotenv.config();
 // app.use(express.static('E-CARD'));
 app.get('/script.js', (req, res) => {
     res.type('application/javascript');
-    res.sendFile(__dirname + '/HTML/script.js');
+    res.sendFile('https://card-changer.onrender.com/' + '/HTML/script.js');
   });
 // app.use("/purchase",restrictToLoggedinUserOnly,routs);
 app.use("/",routs);
@@ -116,7 +116,7 @@ const { cardDetails } = require('./models/user');
 
 // payment gateway ends here
 mongoose.connect('mongodb+srv://harshshrivastava599:ZDvMNYmnHcTxLIG6@card-changer.eez0w8r.mongodb.net/');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 10000;
 
 app.listen(port,()=>{
     console.log(`server successfully at port ${port}`);
