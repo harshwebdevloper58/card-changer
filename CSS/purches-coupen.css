@@ -27,3 +27,18 @@ img{
     font-size: 30px;
     font-weight: bold;
 }
+@media (max-width:500px){
+   .container{
+    width: 106vw;
+    position: absolute;
+    z-index: 10;
+   }
+   .imgdiv{
+     position: absolute;
+   }
+   img{
+    width: 100vw;
+    height: 100vh;
+    margin-top: 150px;
+   }
+}

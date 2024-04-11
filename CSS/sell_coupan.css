@@ -13,7 +13,7 @@ body{
 }
 .sell-section{
 max-width: 80vw;
-max-height: auto;
+max-height: 1000px;
 margin: auto;
 display: flex;
 align-items: center;
@@ -44,5 +44,18 @@ form input[placeholder]{
 @media (max-width:500px){
     form input{
         width:270px;
+    }
+    form input,select{
+        margin: -15px 0px;
+        width: 254px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .submit{
+        margin-top: 12px;
     }
 }
