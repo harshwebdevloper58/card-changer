@@ -8,6 +8,7 @@ function otpGenerator(otp) {
       var transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
+            
               user: 'shrivastavaharsh1910@gmail.com',
               pass: 'thlj tmhs yyvl utqb'
           }

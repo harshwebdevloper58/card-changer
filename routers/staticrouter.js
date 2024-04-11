@@ -47,7 +47,9 @@ router.get("/sell", restrictToLoggedinUserOnly, (req, res) => {
 });
 
 router.get("/purchase", restrictToLoggedinUserOnly, (req, res) => {
-    res.redirect('https://card-changer.onrender.com/HTML/purchase_coupan.html');
+    const cardNumber = req.query.cardNumber;
+    const redirectTo = `https://card-changer.onrender.com/HTML/purchase_coupan.html?cardNumber=${cardNumber}`;
+    res.redirect(redirectTo);
 });
 
 router.get("/category", (req, res) => {
