@@ -115,7 +115,7 @@ const { cardDetails } = require('./models/user');
 // app.use('/',paymentRoute);
 
 // payment gateway ends here
-mongoose.connect(process.env.mongo_url);
+mongoose.connect('mongodb+srv://harshshrivastava599:ZDvMNYmnHcTxLIG6@card-changer.eez0w8r.mongodb.net/');
 const port = process.env.PORT || 3000;
 
 app.listen(port,()=>{
