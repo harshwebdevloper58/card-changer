@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.registration{
+    display: flex;
+    flex-direction: column;
+    width: 423px;
+    z-index: 10;
+    box-shadow: 2px 2px rgb(38, 5, 53);
+    background-color: linear-gradient(45deg , #bcb927 45%, #3cc82c 75%);
+    text-align: center;
+    font-family:'Poppins';
+    border-radius: 14px;
+    border: 2px solid black;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: top right;
+    background-image: url(https://img.freepik.com/free-photo/flat-lay-clipboards-with-copy-space_23-2148219259.jpg?w=996&t=st=1705652581~exp=1705653181~hmac=1f3e101acc9f380109219940099652bc0d8d5cfb85d8f87ba80d97201abf9b5f);
+}
+.inputbox{
+    margin: 9px;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 23px;
+}
+.A{
+    text-align: left;
+    margin: 2px 13px;
+}
+.googlesection {
+    display: flex;
+    margin: -10px;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    height: 35px;
+    border-radius: 23px;
+    background-color: #50cf6c;
+}
+.buttoncreate {
+    width: 109px;
+    height: 34px;
+    margin: 5px auto;
+    padding: 9px;
+}
+.googlebutton {
+    width: 82px;
+}
+.sepration{
+    height: 4px;
+    background-color: white;
+    width: 200px;
+    margin: 3px auto;
+}
+.registration :nth-child(1){
+    margin: 16px;
+    font-size: 22px;
+    font-weight:400;
+}
+input[type="text"]::placeholder {
+    text-align: center;
+    font-weight: 200;
+    font-family:'Poppins';
+}
+input[type="email"]::placeholder {
+    text-align: center;
+    font-weight: 200;
+    font-family:'Poppins';
+}
+input[type="number"]::placeholder {
+    text-align: center;
+    font-weight: 200;
+    font-family:'Poppins';
+}
+input[type="password"]::placeholder {
+    text-align: center;
+    font-weight: 200;
+    font-family:'Poppins';
+}
+button:hover{
+    background-color:#AAFF00;
+}

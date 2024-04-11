@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sign_up">
+        <form method="post" action="http://localhost:3000/card-details">
+            <h3> Enter your Card Details</h3>
+            <label for="name" name="name">Company-Name:<span style="color:red;">*</span></label><input type="text" name="CompanyName"/><br>
+            <label for="email" name="email">discount-Offer:<span style="color:red;">*</span></label><input type="text" name="discountOffer"/><br>
+            <label for="location" name="location">brief-Description:<span style="color:red;">*</span></label><input type="text" name="briefDescription"/><br>
+            <label for="Mobile_no" name="Mobile_no">Expiry-Date:<span style="color:red;">*</span></label><input type="date" name="expiryDate"/><br>
+            <label for="Aadhar" name="Aadhar_no">Description:</label><input type="text" name="description"/><br>
+            <label for="password" name="password">terms And Conditions:<span style="color:red;">*</span></label><input type="text" name="termsAndConditions"/><br>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+
+        <div style="margin:10px 0;"><b>Note: </b><span style="color:red;">*</span> marked fields are reuired to fill the
+            form.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    margin: 0px 37px;
+    background-color: #9ee0de;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.container{
+    width: 36vw;
+    color: #0e405a;
+}
+p{
+    font-weight: bolder;
+    font-size: 16px;
+}
+span{
+    font-weight: lighter;
+}
+img{
+    width: 50vw;
+    height: 100vh;
+}
+.main{
+    font-size: 30px;
+    font-weight: bold;
+}

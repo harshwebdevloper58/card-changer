@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER PROFILE</title>
+    <link href="../CSS/profile.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="nav">
+
+        <ul>
+            <span id="logo"><img src="../IMAGES/home-logo.png" alt="logo"></span>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/category">CATEGORIES</a></li>
+                <li><a href="../HTML/About.html">ABOUT</a></li>
+                <li><a href="/login" id="login-btn">LOGIN</a></li>
+                <li><a href="/signup" id="signup-btn">SIGN-UP</a></li>
+                <li><a href="profile" id="profile-btn">profile</a></li>
+                <li><button id="logout-btn">LOG-OUT</button></li>
+        </ul>
+
+    </div>
+    <div class="content1">
+        <div class="profile">
+            <div class="image">
+                <img src="../IMAGES/dummy-profile.png" alt="profile avatar">
+            </div>
+            <p class="username"> User Name </p>
+            <h3> Personal Info:</h3>
+            <div class="info">Name: <span class="name"></span></div>
+            <div class="info">Email:<br><span class="email"></span></div>
+            <div class="info">Number Of Cards Uploaded : <id class="cardsCounter" id="noc"></span></div>
+                <button id="logout-btn">Log Out</button>
+        </div>
+        <div class="details">
+            <div class="head">
+                <button id="allcard" onclick="cards()">Your Card</button>
+                <button id="expirecard">Expired Card</button>
+            </div>
+            <div class="cards">
+
+
+            </div>
+            <div class="expired"></div>
+            <!-- <button>MORE</button> -->
+        </div>
+    </div>
+    <script>
+        function cards(){
+            var displayCards = document.querySelector('.cards');
+            displayCards.style.display = 'flex';
+            var Cards = document.querySelector('.expired');
+            Cards.style.display = 'none';
+        }
+
+        fetch('/api/profile', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => {
+            if (!response.ok) {
+                console.log("there is some network issue")
+            }
+            else {
+                return response.json();
+            }
+        }).then(data => {
+            const userName = document.querySelector(".username");
+            const email = document.querySelector(".email");
+    
+            const name = document.querySelector(".name");
+            userName.innerHTML = data.name;
+            name.innerHTML = data.name;
+            email.innerHTML = data.email;
+    
+        }).catch(err => {
+            console.log("error:", err)
+        })
+        fetch('/api/profile/card-details', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => {
+            if (!response.ok) {
+                console.log('error in fetch')
+            }
+            else {
+                return response.json();
+            }
+        }).then(data => {
+
+            let n = data.length;
+            let noc = document.getElementById('noc')
+            noc.innerHTML = n;
+            for (let i = 0; i < n; i++) {
+                const cards = document.querySelector(".cards");
+                const cardsDiv = document.createElement('div');
+                cardsDiv.classList.add(`card`);
+                cardsDiv.innerHTML = ` <div class="img">
+                            <img src="../IMAGES/myntra.png" alt="logo" width="260" height="150">
+                        </div>
+                        <div class="detail">
+                            <p class="ucc">YOUR CARD CODE</p>
+                            <a >${data[i].code}</a>
+                            <p class="c">COMPANY : <p class="card-c-${i}"></p></p>
+                            <p>EXPIRE date : <span class="card-e-${i}"></span></p>
+                            <p>OFFER/DISCOUNT : <span class="card-d-${i}"></span></p>
+                        </div>`;
+                cards.appendChild(cardsDiv);
+            }
+            for (let i = 0; i < n; i++) {
+                const company = document.querySelector(`.card-c-${i}`);
+                const offer = document.querySelector(`.card-d-${i}`)
+                const expiry = document.querySelector(`.card-e-${i}`);
+                company.innerHTML = data[i].company;
+                offer.innerHTML = data[i].offer;
+                expiry.innerHTML = data[i].expiry;
+
+            }
+            expirecard.addEventListener('click',()=>{
+                var alcard = document.querySelector('.cards')
+                alcard.style.display = 'none';
+                var Cards = document.querySelector('.expired');
+            Cards.style.display = 'flex';
+            Cards.innerHTML = '';
+                for (let i = 0; i < n; i++) {
+                var expiry = new Date(data[i].expiry);
+            expiry.setHours(0,0,0,0);
+            var today = new Date();
+            today.setHours(0,0,0,0);
+                if(expiry<today){
+                console.log(data[i].expiry)
+                const cards = document.querySelector(".expired");
+                const cardsDiv = document.createElement('div');
+                cardsDiv.classList.add(`card`);
+                cardsDiv.innerHTML = ` <div class="img">
+                            <img src="../IMAGES/myntra.png" alt="logo" width="260" height="150">
+                        </div>
+                        <div class="detail">
+                            <p class="ucc">YOUR CARD CODE</p>
+                            <a >${data[i].code}</a>
+                            <p class="c">COMPANY : <p class="card-c-${i}">${data[i].company}</p></p>
+                            <p>EXPIRE date : <span class="card-e-${i}"></span>${data[i].expiry}</p>
+                            <p>OFFER/DISCOUNT : <span class="card-d-${i}">${data[i].offer}</span></p>
+                        </div>`;
+                      
+                cards.appendChild(cardsDiv);
+            }
+           
+           
+            }
+       
+            })
+           
+       }).catch(error => {
+            console.log("error in fetching card details")
+        })
+        fetch('/isLoggedIn').then(response => response.json()).then(data => {
+                const isLoggedIn = data.status;
+                console.log(isLoggedIn)
+                const loginBtn = document.getElementById('login-btn');
+                const signupBtn = document.getElementById('signup-btn');
+                const profileBtn = document.getElementById('profile-btn');
+                const logoutBtn = document.getElementById('logout-btn');
+
+                if (isLoggedIn=='true') {
+                    console.log("logged in")
+                    loginBtn.style.display = 'none';
+                    signupBtn.style.display = 'none';
+                    profileBtn.style.display = 'inline-block';
+                    logoutBtn.style.display = 'inline-block';
+                }
+                else {
+                    loginBtn.style.display = 'inline-block';
+                    signupBtn.style.display = 'inline-block';
+                    profileBtn.style.display = 'none';
+                    logoutBtn.style.display = 'none';
+                }
+
+            }).catch(
+                error => console.error('Error fetching isLoggedIn status:', error));
+
+            // ----logout -------//
+            function logout() {
+                fetch('api/logout', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            // Reset UI to show login and signup buttons
+                            const loginBtn = document.getElementById('login-btn');
+                            const signupBtn = document.getElementById('signup-btn');
+                            const profileBtn = document.getElementById('profile-btn');
+                            const logoutBtn = document.getElementById('logout-btn');
+
+
+                            console.log("log out")
+                            loginBtn.style.display = 'inline-block';
+                            signupBtn.style.display = 'inline-block';
+                            profileBtn.style.display = 'none';
+                            logoutBtn.style.display = 'none';
+                            // window.location.search = "localhost:3000/"
+
+                        } else {
+                            console.error('Failed to logout');
+                        }
+                    })
+                    .catch(error => console.error('Error logging out:', error));
+            }
+
+
+
+            document.getElementById('logout-btn').addEventListener('click', logout);
+
+            //code for a your card and a expire card
+            allcard.addEventListener("click",()=>{
+                
+            })
+            expirecard.addEventListener("click",()=>{
+                console.log("b")
+            })
+    </script>
+</body>
+
+</html>

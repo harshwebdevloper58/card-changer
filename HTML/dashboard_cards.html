@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Changer</title>
+    <link href="../CSS/dashboard_cards.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="home">
+        <div class="nav">
+
+            <ul>
+                <span id="logo"><img src="../IMAGES/home-logo.png" alt="logo"></span>
+                <li><a href="#">HOME</a></li>
+                <li><a href="/category">CATEGORIES</a></li>
+                <li><a href="../HTML/About.html">ABOUT</a></li>
+                <li><a href="/login" id="login-btn">LOGIN</a></li>
+                <li><a href="/signup" id="signup-btn">SIGN-UP</a></li>
+                <li><a href="profile" id="profile-btn">profile</a></li>
+                <li><button id="logout-btn">Log Out</button></li>
+            </ul>
+
+        </div>
+        <button class="nav-btn" id="nav-btnh" onclick="navbar()">
+            <span class="material-symbols-outlined">
+                menu
+                </span>
+        </button>
+        <div class="content">
+            <h1>LOOKING FOR DISCOUNT.</h1>
+            <p>GET COUPAN FROM YOUR INTEREST</p>
+            <p>SELL AND BUY DISCOUNT CARD ACCORDING TO YOUR PREFERENCE AND GET MONEY</p>
+            <a href="#wrap">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                EXPLORE CARD</a>
+        </div>
+    </div>
+
+    <div class="step-heading">
+        <h1>Three Steps To Get Your Card</h1>
+    </div>
+    <div class="steps">
+        <div class="card">
+            <h3>STEP:1</h3>
+            <span class="material-symbols-outlined">
+                login
+            </span>
+            <h3>LOGIN IN OUR WEBSITE, SEARCH CARD FROM YOUR REQUIREMENT AND ADD CARD IN CART.</h3>
+        </div>
+        <div class="card">
+            <h3>STEP:2</h3>
+            <span class="material-symbols-outlined">
+                trolley
+            </span>
+            <h3>LOGIN IN OUR WEBSITE, SEARCH CARD FROM YOUR REQUIREMENT AND ADD CARD IN CART.</h3>
+        </div>
+        <div class="card">
+            <h3>STEP:3</h3>
+            <span class="material-symbols-outlined">
+                phone_android
+            </span>
+            <h3>LOGIN IN OUR WEBSITE, SEARCH CARD FROM YOUR REQUIREMENT AND ADD CARD IN CART.</h3>
+        </div>
+    </div>
+    <div class="part-2">
+        <div class="purchase-card">
+            <a href="#wrap" id="purchase-btn">PURCHASE COUPAN</a>
+        </div>
+        <div class="sell-card"><a href="/sell" id="sell-btn">SELL COUPAN</a></div>
+    </div>
+
+
+    <div class="wrapper" id="wrap">
+        <div class="main-heading">
+            <h1>GRAB DISCOUNT</h1>
+        </div>
+        <div class="heading">
+            <h2> HEALTHCARE CARDS</h2>
+        </div>
+
+        <div class="cards">
+            <button id="prev-slide" class="slide-button material-symbols-outlined">arrow_back_ios_new</button>
+            <!-- <div class="main-cards"> -->
+            <div class="main-cards healthcare cat1">
+
+              
+
+            </div>
+            <button id="next-slider" class="slide-button material-symbols-outlined">chevron_right</button>
+            <!-- </div> -->
+            <div class="heading">
+                <h2> SHOPPING CARDS</h2>
+            </div>
+        </div>
+        <div class="cards">
+            <button id="prev-slide" class="slide-button2 material-symbols-outlined">arrow_back_ios_new</button>
+            <div class="main-cards  shopping cat2 main-card2">
+               
+             
+            </div>
+            <button id="next-slider" class="slide-button2 material-symbols-outlined">chevron_right</button>
+        </div>
+        <div class="heading">
+            <h2> OTHER CARDS</h2>
+        </div>
+
+        <div class="cards ">
+            <button id="prev-slide" class="slide-button3 material-symbols-outlined">arrow_back_ios_new</button>
+            <div class="main-cards others cat3 main-card3">
+               
+                
+              
+            </div>
+            <button id="next-slider" class="slide-button3 material-symbols-outlined">chevron_right</button>
+        </div>
+    </div>
+    <div class="faq">
+        <h1 class="faqh1">FREQUENTLY ASKED QUESTIONS</h1>
+
+        <div class="q">
+            <h2>1.WHAT CARD CHANGER DO ?</h2>
+            <p>We are providing where users can exchange discount coupan from there need.</p>
+        </div>
+        <div class="q">
+            <h2>2.WHICH TYPE OF CARD CAN EXCHANGE ?</h2>
+            <p>You can exchage any card provided by this web-site.</p>
+        </div>
+        <div class="q">
+            <h2>3.IS THIS WEB SITE FREE?</h2>
+            <p>Yes this web-site is free but to use a card first you have to buy a card from seller.</p>
+        </div>
+        <div class="q">
+            <h2>4.CAN I ALSO SELL MY CARDS ?</h2>
+            <p>Yes, but have to give info about a card want's to sell first.</p>
+        </div>
+        <div class="q ip">
+            <h2>HAVE SOME MORE QUERIES ?</h2>
+            <input type="text" value="" class="xyz" name="faq" placeholder="Ask/suggest something">
+            <input type="submit" value="submit" class="query-btn">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="logo">
+            <img src="../IMAGES/card-change.png" width="150" height="100">
+        </div>
+        <div class="lm">
+            <h4>learn More</h4>
+            <ul>
+                <li>
+                    card change
+                </li>
+                <li>terms & conditions</li>
+                <li>about</li>
+            </ul>
+        </div>
+        <div class="cards">
+            <h4>Cards</h4>
+            <ul>
+                <li>discount</li>
+                <li>expire</li>
+                <li>validity</li>
+                <li>card number</li>
+                <li>payment</li>
+            </ul>
+        </div>
+
+        <div class="Cu">
+            <h4>Contact Us</h4>
+            <ul>
+                <li>email.cardchanger77@gmail.com</li>
+                <li>phone:1234567890</li>
+            </ul>
+        </div>
+
+        <div class="social">
+            <h4>Social</h4>
+            <ul>
+                <li>
+                    <img src="../IMAGES/fb-logo.jpg" alt="fb-logo" width="20" height="20">
+                </li>
+                <li>
+                    <img src="../IMAGES/insta-logo.png" alt="fb-logo" width="30" height="30">
+                </li>
+                <li>
+                    <img src="../IMAGES//linked-in.png" alt="fb-logo" width="35" height="35">
+                </li>
+                <li>
+                    <img src="../IMAGES/yt-logo.png" alt="fb-logo" width="30" height="30">
+                </li>
+            </ul>
+        </div>
+        <hr width="80%" size="2" color="lightgrey">
+        <p class="copy">&copy; 2024 Lift Media | All Rights Reserved</p>
+    </div>
+    <script>
+        function navbar() {
+            let nav = document.querySelector('.nav');
+            let s = nav.style.display;
+            let blockNav = document.querySelector('.nav ul');
+            let nav_btn = document.getElementById('nav-btnh')
+            if (s == 'none') {
+                nav.style.display = 'flex';
+               blockNav.style.display = 'block';
+               nav_btn.style.color = 'white';
+            }
+            else {
+                nav.style.display = 'none';
+                nav_btn.style.color = 'black';
+            }
+        }
+       //--------checks for login------->
+        fetch('/isLoggedIn').then(response => response.json()).then(data => {
+            const isLoggedIn = data.status;
+            console.log(isLoggedIn)
+            const loginBtn = document.getElementById('login-btn');
+            const signupBtn = document.getElementById('signup-btn');
+            const profileBtn = document.getElementById('profile-btn');
+            const logoutBtn = document.getElementById('logout-btn');
+
+            if (isLoggedIn == 'true') {
+                console.log("logged in")
+                loginBtn.style.display = 'none';
+                signupBtn.style.display = 'none';
+                profileBtn.style.display = 'inline-block';
+                logoutBtn.style.display = 'inline-block';
+            }
+            else {
+                loginBtn.style.display = 'inline-block';
+                signupBtn.style.display = 'inline-block';
+                profileBtn.style.display = 'none';
+                logoutBtn.style.display = 'none';
+            }
+
+        }).catch(
+            error => console.error('Error fetching isLoggedIn status:', error));
+
+        // ----logout -------//
+        function logout() {
+            fetch('api/logout', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Reset UI to show login and signup buttons
+                        const loginBtn = document.getElementById('login-btn');
+                        const signupBtn = document.getElementById('signup-btn');
+                        const profileBtn = document.getElementById('profile-btn');
+                        const logoutBtn = document.getElementById('logout-btn');
+
+
+                        console.log("log out")
+                        loginBtn.style.display = 'inline-block';
+                        signupBtn.style.display = 'inline-block';
+                        profileBtn.style.display = 'none';
+                        logoutBtn.style.display = 'none';
+                        // window.location.search = "localhost:3000/"
+
+                    } else {
+                        console.error('Failed to logout');
+                    }
+                })
+                .catch(error => console.error('Error logging out:', error));
+        }
+
+
+
+        document.getElementById('logout-btn').addEventListener('click', logout);
+
+        fetch('/api/card-details', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => {
+            if (!response.ok) {
+                console.log("Netword issue")
+            }
+            else {
+                return response.json();
+            }
+        }).then(data => {
+            // console.log("this is data", data[0]);
+            const n = data.length;
+            console.log(n);
+            let cards;
+            for (let i = 0; i < n; i++) {
+                let expiry = new Date(data[i].expiry);
+                expiry.setHours(0,0,0,0);
+                let today = new Date();
+                today.setHours(0,0,0,0);
+                if(today>expiry){
+                    continue;
+                }
+                if(data[i].category == 'Shopping'){
+                cards = document.querySelector(".shopping");
+                }
+                else if(data[i].category == 'Healthcare'){
+                cards = document.querySelector(".healthcare");
+                }
+                else{
+                    cards=document.querySelector('.others')
+                }
+                const cardsDiv = document.createElement('div');
+                cardsDiv.classList.add('card');
+                cardsDiv.innerHTML = ` <div class="img">
+                            <img src="../IMAGES/myntra.png" alt="logo" width="260" height="150">
+                        </div>
+                        <div class="details">
+                            <p class="ucc">YOUR CARD CODE</p>
+                            <a href="#">DRRVF5FR949JF</a>
+                            <p class="c">COMPANY : <span class="card-c-${i}">${data[i].company}</span></p>
+                            <p>EXPIRE date : <span class="card-e-${i}">${data[i].expiry}</span></p>
+                            <p>OFFER/DISCOUNT : <span class="card-d-${i}">${data[i].offer}</span></p>
+                            <button onclick="openCardDetails(${i})" class="pc">GET CODE</button>
+                        </div>`;
+                cards.appendChild(cardsDiv);
+            }
+
+        })
+        function openCardDetails(cardNumber) {
+            const url = '/purchase?cardNumber=' + cardNumber;
+
+            // Open the new page
+            window.open(url, '_blank');
+        }
+        let currentIndex = 0;
+        function next(direction) {
+            const cards = document.querySelector('.cat1');
+            const totalCards = document.querySelectorAll('.cat1 div').length;
+
+            currentIndex += direction + 4;
+            if (currentIndex <= (totalCards - 4)) {
+                const bt = document.getElementsByClassName('next');
+                //bt.style.visibility='hidden';
+            }
+            const translateValue = -currentIndex * 3.5 + '%';
+            cards.style.transform = 'translateX(' + translateValue + ')';
+        }
+        let next2index = 0;
+        function next2(direction) {
+
+            const cards = document.querySelector('.cat2');
+            const totalCards = document.querySelectorAll('.cat2 div').length;
+
+            next2index += direction + 4;
+            if (next2index <= (totalCards - 4)) {
+                const bt = document.getElementsByClassName('next');
+                //bt.style.visibility='hidden';
+            }
+            const translateValue = -next2index * 3.5 + '%';
+            cards.style.transform = 'translateX(' + translateValue + ')';
+        }
+        let next3index = 0;
+        function next3(direction) {
+
+            const cards = document.querySelector('.cat3');
+            const totalCards = document.querySelectorAll('.cat3 div').length;
+
+            next3index += direction + 4;
+            if (currentIndex <= (totalCards - 4)) {
+                const bt = document.getElementsByClassName('next');
+                // bt.style.display='none';
+            }
+            const translateValue = -next3index * 3.5 + '%';
+            cards.style.transform = 'translateX(' + translateValue + ')';
+        }
+       
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

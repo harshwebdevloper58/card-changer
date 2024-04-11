@@ -1,0 +1,158 @@
+body {
+    background-color: #feddc6;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 41vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 323px;
+    gap: 16px;
+    align-items: center;
+}
+
+.left-form {
+    width: 23vw;
+    height: 59vh;
+    background-color: rgba(255, 255, 255, 0.191);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation: rotate 1s ease-in-out 0.1s 1;
+    transition: transform 0.6s ease;
+}
+
+.left-form:hover {
+    box-shadow: 0 0 10px 1px;
+    transform: scale(1.05);
+}
+
+@keyframes rotate {
+    0% {
+        rotate: y 0deg;
+        opacity: 0;
+    }
+
+    100% {
+        rotate: y 360deg;
+        opacity: 1;
+    }
+}
+
+.lastsection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.getinput {
+    height: 29px;
+    background: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    width: 230px;
+}
+
+.userinputsubmit {
+    height: 29px;
+    width: 130px;
+    background: #f04f1d;
+    color: white;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.googlesection {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: white;
+    width: 103px;
+    height: 38px;
+    border-radius: 47px;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.recolor {
+    color: red;
+}
+
+.loginsideimage {
+    animation: updown 1s ease infinite;
+    position: relative;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes updown {
+    0% {
+        top: 1px;
+
+    }
+
+    100% {
+        top: 20px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .container {
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        margin-top: 100px;
+        align-items: center;
+    }
+    .right-side{
+        margin:0;
+    }
+    .left-side{
+        width: 100vw;
+        margin: 0px;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            
+        
+    }
+    .left-form{
+        width: 85vw;
+        position:absolute;
+        position: absolute;
+            top:183px;
+
+    }
+  
+    .loginsideimage{
+        
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: -10;
+    }
+}

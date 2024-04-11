@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        .chatbot{
+            margin:auto;
+            padding:auto;
+            width:80vw;
+            height:450px;
+            padding:20px;
+            background-color: rgb(162, 208, 248);
+        }
+        .head{
+            display:block;
+            height:50px;
+        }
+        .media{
+            height:410px;
+            /* display: flex; */
+            background-color: white;
+
+        }
+        .media .chat-input{
+            border-radius: 5px;
+            height:25px;
+            width:900px;
+            margin:5px;
+            
+        }
+        .ip-btn{
+            display: flex;
+            position: relative;
+            bottom:-195px;
+        }
+        h5{
+            margin:0;
+            padding:0;
+        }
+        #sendBtn{
+            border-radius: 5px;
+            height:35px;
+            width:100px;
+            background-color: aqua;
+            /* margin:5px; */
+        }
+        #content{
+            width:1000px;
+            height:170px;
+            
+            
+        }
+        #content div{
+            width:100%;
+            height:30px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> Chat Bot</h1>
+    <div class="chatbot">
+       
+        <div class="head">
+            <h5>Bot</h5><span style="color:rgb(5, 136, 11)">Online</span>
+        </div>
+        <div class="media">
+            <div id="content"></div>
+            <div class="ip-btn">
+            <input type="text" id="chat-ip" class="chat-input">
+            <div class="input-group-append">
+                <button id="sendBtn" type="button" class="btn btn-primary">Send</button>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        let input = document.getElementById('chat-ip');
+        let send = document.getElementById('sendBtn');
+        let content = document.getElementById('content');
+        const user = {message:""};
+        function botResponse(userMessage){
+            var botMessage="";
+           if(userMessage==="hii"){
+                botMessage = "hello";
+           }
+           
+        const msg = document.createElement('div');
+                msg.style.textAlign = "right";
+                msg.innerHTML =`<span> Bot : </span><span> ${botMessage } </span>`;
+                content.appendChild(msg);
+        }
+        send.addEventListener('click',(e)=>{
+            var userMessage = input.value;
+            if(userMessage === ""){
+                alert("please provide your query?");
+            }
+            else{
+                user.message = userMessage;
+                input.value = ""; 
+                const msg = document.createElement('div');
+                msg.style.textAlign = "right";
+                msg.innerHTML =`<span> You : </span><span> ${userMessage } </span>`;
+                content.appendChild(msg);
+                setTimeout(botResponse,1000);
+                
+            }
+        })
+    </script>
+</body>
+</html>

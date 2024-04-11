@@ -1,0 +1,872 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+* {
+    font-family: 'Baloo 2', sans-serif;
+}
+
+body {
+    background-color: rgb(233, 217, 233);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.home {
+    margin: 5px auto;
+    background: url(../IMAGES/home.jpg);
+    width: 95vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* backdrop-filter: saturate(180%) blur(20px);
+     */
+
+
+}
+
+.home .nav {
+    margin-top: 20px;
+    margin-right: 0px;
+    background-color: rgb(1, 49, 53);
+    height: 78px;
+    border-radius: 0 0 20px 20px;
+    animation: nav-ani 1.5s forwards;
+    position: relative;
+    top: 0;
+    z-index: 0;
+}
+
+@keyframes nav-ani {
+    from {
+        top: -80px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+.home .nav ul {
+    display: flex;
+    float: right;
+}
+
+#logo img {
+    margin: auto 0;
+    padding-top: 0;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    border-radius: 0 0 0 20%;
+    border: 1px solid transparent;
+}
+
+.nav li {
+    margin-right: 30px;
+    list-style-type: none;
+}
+
+.nav a {
+    color: rgb(242, 247, 246);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: font-size 0.5s ease;
+}
+
+.nav a:hover {
+    color: lightseagreen;
+    font-size: 1.6rem;
+}
+
+.nav-btn {
+    display: none;
+    display: flex;
+    float: right;
+}
+
+#logout-btn {
+    display: none;
+    color: rgb(242, 247, 246);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: font-size 0.5s ease;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+#logout-btn:hover {
+    color: lightseagreen;
+    font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav li {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .nav li a,
+    .nav li button {
+        padding: 10px;
+    }
+
+    .nav-btn {
+        background-color: transparent;
+        border-radius: 20%;
+        border: 2px solid lightgreen;
+        
+    }
+
+
+}
+
+.content {
+    clear: both;
+    display: block;
+    width: 35vw;
+    margin-left: 20px;
+    position: relative;
+    animation: slidecontent 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+@keyframes slidecontent {
+    0% {
+        left: 200px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+
+.content h1 {
+    font-weight: lighter;
+    font-size: 3.5rem;
+    text-shadow: 2px 8px 5px rgb(124, 118, 118);
+}
+
+.content p {
+    font-size: 1.7rem;
+    margin: 10px auto;
+}
+
+.content p:nth-child(3) {
+    margin-bottom: 40px;
+}
+
+.content a {
+    text-decoration: none;
+    color: rgb(14, 13, 13);
+    background-color: transparent;
+    width: 100px;
+    height: auto;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1.5px solid rgba(255, 255, 255, 0.184);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin: 50px;
+    position: relative;
+    overflow: hidden;
+    /* background: linear-gradient(45deg,rgb(186 210 238) 20%,#2254b2); */
+}
+
+
+/* this is a explore btn animation writtn by harsh start here */
+.content a span {
+    position: absolute;
+    display: block;
+}
+
+.content a :nth-child(1) {
+    top: 0px;
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, blue, white);
+    animation: bt1 1s ease-in-out infinite;
+}
+
+@keyframes bt1 {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: 40%;
+    }
+}
+
+.content a :nth-child(2) {
+    top: -100px;
+    right: 0px;
+    width: 2px;
+    height: 60%;
+    background: linear-gradient(0deg, blue, white);
+    animation: bt2 1s ease-in-out infinite;
+
+}
+
+@keyframes bt2 {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: 25px;
+    }
+}
+
+.content a :nth-child(3) {
+    bottom: 0px;
+    right: 0px;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, blue, white);
+    animation: bt3 1s ease-in-out infinite;
+}
+
+@keyframes bt3 {
+    0% {
+        right: 0px;
+    }
+
+    100% {
+        right: 40%;
+    }
+}
+
+.content a :nth-child(4) {
+    bottom: 0%;
+    left: 0px;
+    width: 2px;
+    height: 60%;
+    background: linear-gradient(0deg, blue, white);
+    animation: bt4 1s ease-in-out infinite;
+}
+
+@keyframes bt4 {
+    0% {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: 25px;
+    }
+}
+
+/* animation ends here */
+.step-heading {
+    margin: 30px auto;
+    width: 300px;
+    text-align: center;
+    text-shadow: 3px 6px 0px rgb(194, 190, 190);
+    font-weight: lighter;
+}
+
+.steps {
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin: 30px auto;
+    width: 93vw;
+    justify-content: space-around;
+    height: auto;
+    background-color: rgb(236, 241, 241);
+    position: relative;
+}
+
+.steps .card {
+    width: 200px;
+    background-color: rgb(186, 210, 238);
+    border-radius: 10px;
+    text-align: center;
+    height: 275px;
+    padding: 10px;
+    font-weight: 100;
+    position: relative;
+}
+
+/* step  card animation start harsh */
+.card1 {
+
+    position: relative;
+    animation: st-cd1 1.5s ease;
+}
+
+@keyframes st-cd1 {
+    0% {
+        left: -250px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0px;
+
+    }
+}
+
+/* animation ends here */
+
+.wrapper {
+    background-color: white;
+    margin: 10px auto;
+    padding: 20px;
+    max-width: 90vw;
+    height: auto;
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+
+}
+
+.wrapper .cards {
+    scrollbar-width: none;
+    overflow-x: hidden;
+    position: relative;
+    overflow-y: hidden;
+
+
+}
+
+.main-heading {
+    padding: 10px;
+    border-radius: 52px;
+    background-color: rgb(145, 198, 248);
+    width: 368px;
+    height: 45px;
+    display: block;
+    margin: 0 auto;
+}
+
+.wrapper .main-heading h1,
+.heading h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: lighter;
+
+}
+
+.heading {
+    background-color: rgb(134, 178, 207);
+    width: 260px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 52px;
+
+}
+
+.part-2 {
+    width: 93vw;
+    margin: 20px auto;
+    display: flex;
+    /* background-color: azure; */
+    align-items: center;
+    justify-content: center;
+}
+
+.part-2 div {
+    width: 250px;
+    text-align: center;
+    background-color: rgb(6 8 53);
+    padding: 10px;
+    margin: 20px 10px;
+    font-size: 25px;
+    /* border-radius: 20px; */
+    border: 2px solid rgb(252, 237, 151);
+    box-shadow: 1px 1px 10px rgb(82, 77, 77);
+    transition: transform 0.7s ease;
+}
+
+.part-2 div:hover {
+    border-radius: 13px;
+    transform: scale(1.05);
+    border: transparent;
+    background-color: rgb(250, 132, 53);
+
+}
+
+.part-2 a {
+    text-decoration: none;
+    color: rgb(250, 252, 250);
+}
+
+.card {
+    width: 245px;
+    height: 333px;
+    background-color: rgb(211, 217, 221);
+    margin: 20px;
+
+
+}
+
+.main-cards .card {
+    width: 260px;
+    height: 400px;
+    background-color: rgb(211, 217, 221);
+    margin: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+/* animation of main-card card written by harsh */
+/* .scrollmain-card {
+    animation: scrollby 2s ease-in-out;
+    position: relative;
+}
+
+@keyframes scrollby {
+    0% {
+        right: 0px;
+        
+    }
+
+    100% {
+        right: 400px;
+        
+    }
+} */
+
+.main-cards .card:hover {
+    transform: scale(1.09);
+}
+
+
+
+.main-cards .card img {
+    border-radius: 15px 15px 0 0;
+}
+
+.main-cards .card .img {
+    width: auto;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px 15px 0 0;
+
+}
+
+.main-cards .card .details {
+    clear: both;
+    width: 100%;
+    height: 250px;
+    padding: 0px auto;
+    margin: 0px auto;
+    background-color: rgb(3, 38, 150);
+    border-radius: 0 0 15px 15px;
+}
+
+.main-cards .card p {
+    text-align: center;
+    margin: 0;
+    color: rgb(221, 201, 201);
+
+}
+
+.main-cards .card .ucc {
+    margin-bottom: 15px;
+}
+
+.main-cards .card .c {
+    margin-top: 15px;
+}
+
+.main-cards .card a {
+    width: 60px;
+    height: 20px;
+    border: 1.5px solid silver;
+    background-color: rgb(45, 30, 250);
+    border-radius: 5px;
+    color: rgb(221, 201, 201);
+    text-decoration: none;
+    padding: 5px;
+    margin: 60px;
+    transition: transform 1s;
+    filter: blur(2.5px);
+    cursor: initial;
+}
+
+.main-cards .card .pc {
+    width: 185px;
+    height: 50px;
+    padding: 3px;
+    text-align: center;
+    margin: 15px 30px;
+    border: 1.5px solid silver;
+    background-color: rgb(4 149 167);
+    border-radius: 5px;
+    color: rgb(216, 245, 186);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 1s;
+    cursor: pointer;
+    position: absolute;
+    bottom: -10px;
+}
+
+.main-cards .card a:hover {
+    scale: 1.05s;
+}
+
+.main-cards {
+    display: flex;
+    overflow-x: auto;
+}
+
+.faq {
+    margin-top: 30px;
+    width: 88vw;
+    margin: 45px auto;
+    padding: 10px;
+    background-color: #fff;
+    display: block;
+    height: auto;
+
+
+}
+
+.faq h1 {
+    text-align: center;
+    margin-top: 30px;
+    /* text-shadow:6px 6px 3px rgb(150, 147, 147); */
+
+}
+
+.faq .q h2 {
+    font-size: 1.05rem;
+}
+
+.faq .q {
+    margin: 30px auto;
+    width: 80vw;
+    height: auto;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background-color: #d3e4f7ef;
+    border: 0 solid rgb(216, 204, 204);
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 5px;
+}
+
+.faq p {
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+.faq .ip {
+    height: auto;
+}
+
+.xyz {
+    width: 80vw;
+    height: 50px;
+    border: 1.5px solid transparent;
+    border-radius: 10px;
+}
+
+.query-btn {
+    display: block;
+    width: 100px;
+    height: auto;
+    padding: 10px;
+    margin: 20px auto 5px auto;
+    background: rgb(171, 179, 162);
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s;
+    border-radius: 10px;
+    border: none;
+}
+
+.query-btn:hover {
+    color: #fff;
+    background-color: rgb(30, 34, 34);
+    transform: scale(1.07);
+}
+
+.footer {
+    background-color: #fff;
+    width: 90vw;
+    padding: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.footer div {
+    width: 16vw;
+}
+
+.footer div ul {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+.social {
+    display: block;
+    float: right;
+    right: 20px;
+    text-align: center;
+    margin-left: 90px;
+}
+
+.social ul {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social ul li {
+
+    margin: 0 1px;
+}
+
+.footer .logo {
+    display: block;
+    margin: auto;
+}
+
+.footer hr {
+    margin-top: 50px;
+}
+
+.footer .copy {
+    width: 100%;
+    text-align: center;
+    font-weight: lighter;
+    font-size: small;
+    color: rgb(116, 107, 107);
+}
+
+.nav-btn {
+    display: none;
+}
+
+@media only screen and (max-width:700px) {
+
+    body {
+        width: 100vw;
+    }
+
+    .home {
+        margin: 0px;
+
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav-btn {
+        display: block;
+        position: fixed;
+        top: 10px;
+    }
+
+    .wrapper {
+        display: block;
+        margin: 20px auto;
+        width: 100vw;
+
+    }
+
+    .main-cards {
+        overflow-x: scroll;
+    }
+
+    .wrapper .next {
+        display: none;
+
+    }
+
+    .wrapper .heading {
+        margin: 10px auto;
+    }
+
+    .main-heading {
+        width: 300px;
+        margin-bottom: 20px;
+
+    }
+
+    .footer {
+        margin: 0;
+        width: 100vw;
+        display: block;
+        padding: 10px;
+    }
+
+    .footer div {
+        width: 90vw;
+        margin: 10px auto;
+        padding: 10px auto;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.slide-button {
+    background-color: black;
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#prev-slide {
+    position: absolute;
+    top: 228px;
+    z-index: 10;
+}
+
+#next-slider {
+    position: absolute;
+    right: 0px;
+    top: 228px;
+    z-index: 10;
+}
+
+.slide-button2 {
+    background-color: black;
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.slide-button3 {
+    background-color: black;
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.main-cards::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* this is animation for a purches and sell button  written by harsh*/
+.pt2 {
+    animation: opacity 2.5s ease-in-out 0.5s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* this animation for a faq head animation */
+.downfall {
+    animation: opdown 2s ease-in-out;
+    position: relative;
+}
+
+@keyframes opdown {
+    0% {
+        opacity: 0;
+        top: -40px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+/* animation for  a footer */
+.movetop {
+    animation: movingtop 1s ease-in-out;
+    position: relative;
+}
+
+@keyframes movingtop {
+    0% {
+        bottom: -400px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+/* responsive a home page */
+@media screen and (max-width:600px) {
+
+    .steps {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        background-position: right;
+        overflow-x: hidden;
+    }
+
+    .content h1 {
+        font-size: 30px;
+    }
+
+    .content {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 34px;
+    }
+
+    .content a {
+        width: 160px;
+        height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-heading {
+        width: 80vw;
+        border-radius: 0px;
+
+    }
+
+    .home .nav {
+        justify-content: center;
+        align-items: center;
+        width: 98vw;
+        border-radius: 0px;
+        height: 253px;
+        position: absolute;
+        z-index: 1;
+        margin-top: 0px;
+    }
+    .nav-btn{
+        z-index: 10;
+    }
+    #logo img{
+        display: none;
+    }
+}

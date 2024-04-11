@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>purchase Coupan</title>
+    <link rel="stylesheet" href="../CSS/purches-coupen.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">REVIEW A CARD DETAILS</div>
+        <h1> Company :   <span id="company"></span></h1>
+        <h3 style="color:red"> Code :   <span id="code"></span></h3>
+        <p>Offer providing   :  <span id="offer"></span></p>
+        <p>About :      <span id="brief"></span></p>
+        <p>Expiry Date :    <span id="expiry"></span></p>
+        <p>Description :    <span id="desc"></span></p>
+        <p>Terms and conditions :  <span id="tandc"></span></p>
+        
+    </div>
+    <!-- <a href="https://buy.stripe.com/test_8wMfZOfwj8vnb5e9AA">Pay</a> -->
+    <div><img src="../IMAGES/LookAt.jpg" alt=""></div>
+    <script>
+        function extractParametersFromURL(urlString) {
+            const url = new URL(urlString);
+            const searchParams = url.searchParams;
+
+            const params = {};
+            for (const [key, value] of searchParams) {
+                params[key] = value;
+            }
+
+            return params;
+        }
+
+        // Example URL
+        const urlString = window.location.href;
+
+        // Convert the URL string into a URL object
+        const url = new URL(urlString);
+        // Extract parameters from URL
+        const parameters = extractParametersFromURL(url);
+
+        // Output parameters
+        const cardNumber = parameters['cardNumber'];
+        fetch("/api/card-details", {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(
+            (response) => {
+                return response.json();
+            }
+        ).then((data) => {
+
+            const company = document.getElementById("company");
+            const code = document.querySelector("#code");
+            const offer = document.querySelector("#offer");
+            const brief = document.querySelector("#brief");
+            const expiry = document.querySelector("#expiry");
+            const desc = document.querySelector("#desc");
+            const tandc = document.querySelector("#tandc");
+
+            company.innerHTML = data[cardNumber].company;
+            code.innerHTML = data[cardNumber].code;
+            offer.innerHTML = data[cardNumber].offer;
+            brief.innerHTML = data[cardNumber].brief;
+            expiry.innerHTML = data[cardNumber].expiry;
+            desc.innerHTML = data[cardNumber].description;
+            tandc.innerHTML = data[cardNumber].TandC;
+        })
+        // Function to extract the query parameter from the URL
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

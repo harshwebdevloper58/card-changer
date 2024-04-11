@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELL COUPAN</title>
+    <link href="../CSS/sell_coupan.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sell-section">
+        <h1>ENTER YOUR CARD DETAILS</h1>
+        <form action="/card-details" method="post">
+
+            <label>
+                Company Name :
+            </label><br>
+
+            <input type="text" name="company" placeholder="Enter coupan company name" required>
+            <br>
+            <label>
+                Category
+            </label><br>
+            <select name="category" required>
+                <option>Shopping</option>
+                <option>Food</option>
+                <option>Healthcare</option>
+                <option>Beauty</option>
+                <option>Other</option>
+            </select>
+            <br>
+            <label>
+                Coupan Code:
+            </label><br>
+
+            <input type="text" name="code" placeholder="Enter coupan code" required>
+
+            <br> <label>
+                Discount/Offer :
+            </label><br>
+            <input type="text" name="offer" placeholder="Enter offer amount" required>
+            <br><label>
+                Coupan Brief :
+            </label><br>
+            <input type="text" name="brief" placeholder="Give some brief about coupan">
+            <br> <label>
+                Expiry Date :
+            </label><br>
+            <input type="date" name="expiry" placeholder="Enter expiry date of coupan" required>
+            <br><label>
+                Details :
+            </label><br>
+            <input type="text" name="description" placeholder="Enter details of coupan" required>
+            <br> <label>
+                Process of redeem :
+            </label><br>
+            <input type="text" name="redeemProcess" placeholder="Enter the process of redeem">
+            <br> <label>
+                Terms and Conditions:
+            </label><br>
+            <input type="text" name="TandC" placeholder="Enter Terms and conditions">
+            <br> <input type="submit" value="submit" name="submit">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+* {
+    font-family: 'Baloo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(74, 160, 189);
+    /* padding:20px; */
+    display: flex;
+}
+
+.profile {
+    padding: 20px auto;
+    height: 100vh;
+    width: 23vw;
+    display: block;
+    border-radius: 0px;
+    background: rgb(162 205 207);
+    margin-top: 0;
+    padding: 0;
+}
+
+.profile .image {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    /* padding:20px auto; */
+    width: 150px;
+    height: 150px;
+    /* border: 5px solid white; */
+    border-radius: 50%;
+    margin: 20px auto;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: white;
+}
+
+.profile h3 {
+    margin: 10px 15px;
+    font-size: 1.5rem;
+
+}
+
+.profile .info {
+    padding: 10px;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: rgb(209, 221, 231);
+    border-radius: 20px;
+}
+
+.profile button {
+    width: 100px;
+    background: rgb(115, 199, 224);
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    font-weight: lighter;
+}
+
+#lg {
+    width: auto;
+}
+
+.profile button span {
+    color: red;
+    text-align: center;
+}
+
+.details {
+    width: 75vw;
+    overflow: hidden;
+}
+
+.head {
+    height: 50px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* .head button{
+    margin-left: 20px;
+    width:150px;
+    padding:10px;
+    background: transparent;
+    border-radius: 5px;
+    font-size: 1.02rem;
+} */
+.head button {
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    float: right;
+    margin-top: 30px;
+    margin-right: 8vw;
+    color: rgb(219, 221, 223);
+    background-color: rgb(58, 158, 251);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.details .cards {
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+    gap: 100px;
+    overflow-y: auto;
+    height: 80vh;
+    scrollbar-color: transparent;
+    scrollbar-width: 0;
+    /* Define scrollbar styles */
+}
+
+.card {
+    width: 260px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+    background-color: rgb(3, 38, 150);
+    border-radius: 6px;
+    color: white;
+}
+
+.cards {
+    scrollbar-width: none;
+    overflow-x: hidden;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    font-family: 'Baloo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+body {
+    display: block;
+}
+
+.nav {
+    margin-right: 0px;
+    background-color: rgb(1, 49, 53);
+    height: 78px;
+    border-radius: 0 0 20px 20px;
+    animation: nav-ani 1.5s forwards;
+    position: relative;
+    top: 0;
+    z-index: 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+@keyframes nav-ani {
+    from {
+        top: -80px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+.nav ul {
+    display: flex;
+    float: right;
+}
+
+#logo img {
+    margin: auto 0;
+    padding-top: 0;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    border-radius: 0 0 0 20%;
+    border: 1px solid transparent;
+}
+
+.nav li {
+    margin-right: 30px;
+    list-style-type: none;
+}
+
+.nav a {
+    color: rgb(242, 247, 246);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-btn {
+    display: none;
+    display: flex;
+    float: right;
+}
+
+#logout-btn {
+    display: none;
+}
+
+.content1 {
+    display: flex;
+}
+
+@media screen and (max-width:500px) {
+    .content1 {
+        flex-direction: column;
+    }
+
+    .profile {
+        width: 100vw;
+    }
+    .details{
+        width: 100vw;
+    }
+}

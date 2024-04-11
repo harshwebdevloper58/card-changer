@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+*{
+    font-family: 'Baloo 2', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    margin:10px;
+    background-color: rgb(0, 195, 255);
+    
+}
+.sell-section{
+max-width: 80vw;
+max-height: auto;
+margin: auto;
+display: flex;
+align-items: center;
+background-color: lightblue;
+flex-direction: column;
+border-radius: 10px;
+
+}
+.sell-section h1{
+    text-align: center;
+}
+form{
+    display: block;
+    padding:auto;
+    margin-bottom: 20px;
+}
+form input,select{
+    width:350px;
+    height:40px;
+    margin-top: 10px;
+    border: transparent;
+    border-radius: 10px;
+}
+
+form input[placeholder]{
+    text-align:center;
+}
+@media (max-width:500px){
+    form input{
+        width:270px;
+    }
+}
