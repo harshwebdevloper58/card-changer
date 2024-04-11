@@ -106,7 +106,7 @@ app.get("/api/card-details", async (req, res) => {
 
 app.get("/api/profile/card-details", async (req, res) => {
     try {
-        const details = await cardDetails.find({});
+        const details = await cardDetails.find({email:req.session.email});
         if (!details) {
             console.log("No details found");
         }
