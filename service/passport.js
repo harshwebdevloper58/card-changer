@@ -9,8 +9,8 @@ passport.deserializeUser((user,done)=>{
 })
 
 passport.use(new googleStrategy({
-    clientID:process.env.CLIENT_ID,
-    clientSecret:process.env.CLIENT_SECRET,
+    clientID:"556535718535-412ti26l7jrhi6eq1rlp9kg4t7nd7q27.apps.googleusercontent.com",
+    clientSecret:"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",
     callbackURL : "http://localhost:3000/login/auth/google/callback",
     passReqToCallback:true
 },
