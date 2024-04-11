@@ -46,10 +46,7 @@ async function handleCardData(req, res) {
         sellerEmail
     })
     console.log("card-details uploaded");
-    const filePath = path.join(__dirname, '..', 'HTML', 'dashboard_cards.html');
-
-
-    return res.sendFile(filePath);
+    res.redirect('https://card-changer.onrender.com/HTML/dashboard_cards.html');
 
 }
 async function fetchProfileDetails(req, res) {

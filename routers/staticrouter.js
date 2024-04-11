@@ -39,9 +39,7 @@ router.get("/signup", (req, res) => {
     res.redirect('https://card-changer.onrender.com/HTML/registration.html');
 })
 router.get("/login", (req, res) => {
-    const filePath = path.join(__dirname, '..', 'HTML', 'login.html');
-
-    res.sendFile(filePath);
+    res.redirect('https://card-changer.onrender.com/HTML/login.html');
 })
 
 router.get("/profile", restrictToLoggedinUserOnly, (req, res) => {
@@ -54,14 +52,10 @@ router.get("/sell", restrictToLoggedinUserOnly, (req, res) => {
     res.redirect('https://card-changer.onrender.com/HTML/sell_coupan.html');
 })
 router.get("/purchase", restrictToLoggedinUserOnly, (req, res) => {
-    const filePath = path.join(__dirname, '..', 'HTML', 'purchase_coupan.html');
-
-    res.sendFile(filePath);
+    res.redirect('https://card-changer.onrender.com/HTML/purchase_coupan.html');
 })
 router.get("/category", (req, res) => {
-    const filePath = path.join(__dirname, '..', 'HTML', 'category.html');
-
-    res.sendFile(filePath);
+    res.redirect('https://card-changer.onrender.com/HTML/category.html');
 })
 
 router.use(bodyParser.urlencoded({ extended: true }));
@@ -100,10 +94,7 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({ email, password });
     console.log(user)
     if (!user) {
-        const filePath = path.join(__dirname, '..', 'HTML', 'login_clone.html');
-        console.log("User not found. Sending login page.");
-
-        return res.sendFile(filePath);
+        res.redirect('https://card-changer.onrender.com/HTML/login_clone.html');
     }
 
     req.session.isLoggedIn = true;
